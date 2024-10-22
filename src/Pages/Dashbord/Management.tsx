@@ -23,6 +23,7 @@ import AlertDialogg from "../../component/AlertDialog";
 import UpateDialog from "../../component/UpdateDialog";
 import { IAttributes, Iproduct } from "./../../interface/index";
 import { ChangeEvent, useState } from "react";
+import { BaseUrl } from "../../App";
 
 function Management() {
   // requests
@@ -208,7 +209,7 @@ function Management() {
                       rounded={"full"}
                       boxSize="80px"
                       
-                      src={`${product.attributes.thumbnail.data[0].attributes.url}`}
+                      src={`${BaseUrl}${product.attributes.thumbnail.data[0].attributes.url}`}
                       alt={product.attributes.title}
                     />
                   ) : (

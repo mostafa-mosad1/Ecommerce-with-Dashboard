@@ -63,7 +63,7 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Market shop</Box>
+            <Box>Shop Ease</Box>
             <HStack
               as={"nav"}
               spacing={4}
