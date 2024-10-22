@@ -15,7 +15,7 @@ function Dashboard() {
     stock: "",
   });
   const [thumbnail, setThumbnail] = useState();
-  const [category, setCategory] = useState<string>();
+  
 
   const onChangeHandlers = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,7 +28,7 @@ function Dashboard() {
     });
   };
 
-  const onThumbnailChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onThumbnailChange = (e:any) => {
     setThumbnail(e.target.files[0]);
   };
 

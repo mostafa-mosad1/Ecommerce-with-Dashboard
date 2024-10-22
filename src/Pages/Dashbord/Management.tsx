@@ -18,7 +18,7 @@ import {
   useGetproductsQuery,
   useUpdateProductMutation,
 } from "../../app/service/getProducts";
-import { BASE_URL } from "../../App";
+
 import AlertDialogg from "../../component/AlertDialog";
 import UpateDialog from "../../component/UpdateDialog";
 import { IAttributes, Iproduct } from "./../../interface/index";
@@ -37,7 +37,7 @@ function Management() {
     // },
   ] = useDeleteProductMutation();
 
-  const [UpdateProductFunction, {}] = useUpdateProductMutation();
+  const [UpdateProductFunction] = useUpdateProductMutation();
 
   // State
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -165,7 +165,7 @@ function Management() {
     });
   };
 
-  const onThumbnailChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onThumbnailChange = (e: any) => {
     setThumbnail(e.target.files[0]);
   };
 
@@ -263,7 +263,7 @@ function Management() {
               JSON.stringify({
                 title: ProductDetails?.title,
                 price: ProductDetails?.price,
-                description: ProductDetails?.description,
+                description: ProductDetails?.descrption,
                 stock: ProductDetails?.stock,
               })
             );
@@ -422,7 +422,7 @@ function Management() {
             </label>
             <textarea
               onChange={onChangeHandlers}
-              value={ProductDetails?.description}
+              value={ProductDetails?.descrption}
               id="description"
               name="description"
               rows={6}

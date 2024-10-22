@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-import { useState } from "react";
+import {  useState } from "react";
 import { Form, useNavigate } from "react-router-dom";
 import { useLoginAuthMutation } from "../app/service/LoginSlice";
 import cookies from "../Cookies/cookies";
@@ -114,7 +114,7 @@ const navgate = useNavigate()
                 <Text color={"blue.400"}>Forgot password?</Text>
               </Stack>
               <Button
-                onClick={(e: React.ChangeEvent<HTMLInputElement>) => {
+                onClick={(e: any) => {
                   e.preventDefault();
                   onSubmitHandler();
                 }}
